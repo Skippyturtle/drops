@@ -7,6 +7,10 @@ from TwitchChannelPointsMiner.logger import LoggerSettings, ColorPalette
 from TwitchChannelPointsMiner.classes.Settings import Priority
 from TwitchChannelPointsMiner.classes.entities.Bet import Strategy, BetSettings, Condition, OutcomeKeys, FilterCondition
 from TwitchChannelPointsMiner.classes.entities.Streamer import Streamer, StreamerSettings
+from TwitchChannelPointsMiner import TwitchChannelPointsMiner
+twitch_miner = TwitchChannelPointsMiner("Skippyturtle94")
+twitch_miner.analytics(host="127.0.0.1", port=5000, refresh=1)   # Analytics web-server
+twitch_miner.mine(followers=False, blacklist=["user1", "user2"])
 
 twitch_miner = TwitchChannelPointsMiner(
     username="Skippyturtle94",
